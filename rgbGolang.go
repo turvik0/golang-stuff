@@ -40,10 +40,13 @@ func main() {
 	println("\033[33;0m This is definately not Yellow \033[0m")
 
 	var mode int
-	fmt.Print("Which mode of rgb string do you prefer(possible answers are 1, 2): ")
+	fmt.Print("Which mode of rgb string do you prefer(possible answers are 1, 2, Enter for default(2)): ")
 	_, err := fmt.Scanln(&mode)
 	if err != nil {
 		fmt.Println("Error reading input:", err)
+	}
+	if mode == 0 {
+		mode = 2
 	}
 	var word string
 	reader := bufio.NewReader(os.Stdin)
