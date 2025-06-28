@@ -53,7 +53,7 @@ func main() {
 	// if err != nil {
 	// 	fmt.Println("Error reading input:", err)
 	// }
-	if word == "" {
+	if word == "\n" {
 		word = "Hello world"
 	}
 	switch mode {
