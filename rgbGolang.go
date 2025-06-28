@@ -36,7 +36,7 @@ func main() {
 	println("\033[33;1m This is Bright Yellow \033[0m")
 	println("\033[33m This is Yellow \033[0m")
 	println("\033[33;2m This is I dont know what Yellow \033[0m")
-	println("\033[33;0m This is I dont know what Yellow \033[0m")
+	println("\033[33;0m This is definately not Yellow \033[0m")
 
 	var mode int
 	fmt.Print("Which mode of rgb Hello world do you prefer(possible answers are 1, 2): ")
