@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"time"
@@ -39,14 +40,16 @@ func main() {
 	println("\033[33;0m This is definately not Yellow \033[0m")
 
 	var mode int
-	fmt.Print("Which mode of rgb Hello world do you prefer(possible answers are 1, 2): ")
+	fmt.Print("Which mode of rgb string do you prefer(possible answers are 1, 2): ")
 	_, err := fmt.Scanln(&mode)
 	if err != nil {
 		fmt.Println("Error reading input:", err)
 	}
 	var word string
+	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Which word do you want to make an rgb(Enter for default Hello world): ")
-	_, err = fmt.Scanln(&word)
+	word, _ = reader.ReadString('\n')
+	// _, err = fmt.Scanln(&word)
 	// if err != nil {
 	// 	fmt.Println("Error reading input:", err)
 	// }
