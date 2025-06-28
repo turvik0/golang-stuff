@@ -42,9 +42,9 @@ func main() {
 	var mode int
 	fmt.Print("Which mode of rgb string do you prefer(possible answers are 1, 2, Enter for default(2)): ")
 	_, err := fmt.Scanln(&mode)
-	if err != nil {
-		fmt.Println("Error reading input:", err)
-	}
+	// if err != nil {
+	// 	fmt.Println("Error reading input:", err)
+	// }
 	if mode == 0 {
 		mode = 2
 	}
