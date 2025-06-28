@@ -30,6 +30,7 @@ func main() {
 	// rgb
 	fmt.Fprintf(os.Stdout, "Red: \033[0;31m %s None: \033[0m %s", "red string", "colorless string")
 	fmt.Fprintf(os.Stdout, "Red: %s %s None: %s %s", colorRed, "red string", colorNone, "colorless string")
+	println()
 
 	// brightness
 	println("\033[33;1m This is Bright Yellow \033[0m")
