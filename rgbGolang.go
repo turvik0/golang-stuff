@@ -42,18 +42,25 @@ func main() {
 	_, err := fmt.Scanln(&mode)
 	if err != nil {
 		fmt.Println("Error reading input:", err)
-		return
+	}
+	var word string
+	fmt.Print("Which word do you want to make an rgb(Enter for default Hello world): ")
+	_, err = fmt.Scanln(&word)
+	// if err != nil {
+	// 	fmt.Println("Error reading input:", err)
+	// }
+	if word == "" {
+		word = "Hello world"
 	}
 	switch mode {
 		case 1:
 			for i := 0; ; i++ {
 				colorCode := 30 + (i % 8)
-				fmt.Printf("\033[%vm Hello world \033[0m\n", colorCode)
+				fmt.Printf("\033[%vm %s \033[0m\n", colorCode, word)
 				time.Sleep(100000000)
 			}
 		case 2:
 			for i := 0; ; i++ {
-				word := "Hello world"
 				for index, j := range word {
 					colorCode := 30 + ((i+index) % 8)
 					fmt.Printf("\033[%vm%c\033[0m", colorCode, j)
